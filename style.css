@@ -1,0 +1,220 @@
+
+  body {
+    background-color: #f5f5f5;
+    color: #333;
+    font-family: 'Segoe UI', sans-serif;
+  }
+
+  .logo {
+    width: 120px;
+    margin: 10px auto;
+    display: block;
+  }
+  .card {
+  background: #ffffff;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  padding: 25px;
+  margin-top: 30px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+/* แถบหัวกล่อง */
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 6px;
+  width: 100%;
+  background: linear-gradient(to right, #f44336, #ff7961);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+/* เพิ่มเอฟเฟกต์ลอยเมื่อ hover */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15);
+}
+
+
+  label {
+    color: #b71c1c;
+    font-weight: 500;
+  }
+
+  input.form-control {
+    background-color: #ffffff;
+    border: 1px solid #ef9a9a;
+    color: #333;
+  }
+
+  .btn {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .btn:active {
+    transform: scale(0.97);
+  }
+
+  .btn-success {
+    background-color: #e53935;
+    border: none;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-success:hover {
+    background-color: #c62828;
+  }
+
+  .btn-success::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: skewX(-20deg);
+    animation: shine 2.5s infinite;
+  }
+
+  @keyframes shine {
+    0% { left: -75%; }
+    50% { left: 125%; }
+    100% { left: 125%; }
+  }
+
+  .btn-outline-danger {
+    color: #e57373;
+    border-color: #e57373;
+  }
+
+  .btn-outline-info {
+    color: #f48fb1;
+    border-color: #f48fb1;
+  }
+
+  .btn-outline-primary,
+  .btn-outline-secondary {
+    border-radius: 20px;
+    border-color: #f44336;
+    color: #f44336;
+  }
+
+  .btn-outline-primary:hover,
+  .btn-outline-secondary:hover {
+    background-color: #f44336;
+    color: white;
+  }
+
+  .result-box {
+    background-color: #ffebee;
+    border-left: 5px solid #f44336;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+    animation: fadeIn 0.5s ease-in;
+  }
+
+  .back-button a {
+    color: #f44336;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+
+  .back-button svg {
+    margin-right: 8px;
+  }
+
+  .footer {
+    text-align: center;
+    font-size: 13px;
+    color: #999;
+    margin-top: 40px;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  .back-button-custom {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fc0000;
+  color: white;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  text-decoration: none;
+  font-size: 24px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  /* ลบ position fixed ออก */
+  position: relative;
+  top: unset;
+  left: unset;
+  z-index: unset;
+  margin-bottom: 15px;
+}
+
+
+.back-button-custom:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+.weld-option-button {
+  background-color: #fff;
+  color: #b75e00;
+  border: 1px solid #ff9800;
+  border-radius: 8px;
+  padding: 8px 16px;
+  margin: 5px;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+  transition: all 0.2s ease;
+}
+
+.weld-option-button:hover {
+  background-color: #ffe0b2;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+.calc-wrapper {
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  max-width: 420px;
+  width: 100%;
+  padding: 30px;
+  text-align: center;
+}
+.calc-wrapper h2 {
+  color: #d32f2f;
+  font-weight: 600;
+}
+.calc-wrapper .form-control {
+  border: 1px solid #f44336;
+  border-radius: 12px;
+}
+.calc-result-box {
+  background-color: #fff3e0;
+  border-left: 4px solid #ff9800;
+  padding: 10px 15px;
+  margin-top: 15px;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
